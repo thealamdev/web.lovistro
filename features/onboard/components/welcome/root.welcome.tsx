@@ -5,7 +5,7 @@ import { WELCOME_SLIDES } from "../../constants/welcome.constants";
 import { StepProgress } from "./step-progress";
 import { WelcomeSlide } from "./welcome-slide";
 import { WelcomeActions } from "./welcome-actions";
-import { useWelcomeCarousel } from "../hooks/use-welcome-carousel";
+import { useWelcomeCarousel } from "../../hooks/use-welcome-carousel";
 
 export default function RootWelcomeComponent() {
     const { emblaRef, currentStep } = useWelcomeCarousel();

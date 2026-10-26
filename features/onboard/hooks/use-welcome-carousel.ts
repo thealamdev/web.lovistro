@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { AUTOPLAY_DELAY } from "../../constants/welcome.constants";
+import { AUTOPLAY_DELAY } from "../constants/welcome.constants";
 
 export function useWelcomeCarousel() {
     const [currentStep, setCurrentStep] = useState(1);
