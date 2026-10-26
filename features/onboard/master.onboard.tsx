@@ -1,11 +1,11 @@
-import SplashIcon from "@/components/icons/SplashIcon";
 import SplashScreen from "@/components/common/SplashScreen";
+import RootWelcomeComponent from "./components/welcome/root.welcome";
 
 export default function MasterOnboard() {
     return (
-        <section className="flex flex-col w-full justify-center items-center h-screen">
+        <section className="flex w-full flex-col items-center justify-center">
             <SplashScreen />
-            <SplashIcon />
+            <RootWelcomeComponent />
         </section>
     )
 }
