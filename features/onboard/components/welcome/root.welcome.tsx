@@ -11,7 +11,7 @@ export default function RootWelcomeComponent() {
     const { emblaRef, currentStep } = useWelcomeCarousel();
 
     return (
-        <section className="relative flex h-dvh w-full max-w-md flex-col overflow-hidden bg-background px-5 pb-6 pt-10">
+        <section className="relative w-full flex h-dvh flex-col overflow-hidden bg-background pb-6 pt-5">
             {/* stepper */}
             <StepProgress currentStep={currentStep} />
 

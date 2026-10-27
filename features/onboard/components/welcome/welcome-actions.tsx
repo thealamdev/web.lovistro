@@ -2,7 +2,11 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { REGISTER_HREF, SIGN_IN_HREF } from "../../constants/welcome.constants";
+import { useAppDispatch } from "@/redux/hooks";
+import { setStep } from "../../slices/step.slice";
+import { STEPS } from "../../constants/onboard.constants";
+import { Steps } from "../../types/onboard.types";
+import { SIGN_IN_HREF } from "../../constants/welcome.constants";
 
 type PageProps = {
     onGoogleClick?: () => void;
@@ -10,6 +14,13 @@ type PageProps = {
 };
 
 export function WelcomeActions({ onGoogleClick, onAppleClick }: PageProps) {
+
+    const dispatch = useAppDispatch();
+
+    const nextStep = (step: Steps) => {
+        dispatch(setStep(step));
+    }
+
     return (
         <div className="flex flex-col items-center gap-4">
             <div className="flex w-full items-center gap-2 rounded-full bg-accent/10 border border-border p-2">
@@ -31,8 +42,11 @@ export function WelcomeActions({ onGoogleClick, onAppleClick }: PageProps) {
                 >
                     <FaApple className="size-5" />
                 </Button>
-                <Button className="h-11 flex-1 rounded-full font-medium">
-                    <Link href={REGISTER_HREF}>Create Account</Link>
+                <Button
+                    onClick={() => nextStep(STEPS.REGISTER)}
+                    className="h-11 flex-1 rounded-full font-medium"
+                >
+                    Create Account
                 </Button>
             </div>
 
