@@ -27,5 +27,5 @@ export const WELCOME_SLIDES: WelcomeSlide[] = [
 export const TOTAL_STEPS = WELCOME_SLIDES.length;
 export const AUTOPLAY_DELAY = 3000;
 
-export const REGISTER_HREF = "/register";
-export const SIGN_IN_HREF = "/login";
+export const socialButtonClass =
+    "h-12 w-full gap-2 rounded-lg bg-[#333533] text-sm font-medium text-foreground hover:bg-[#3d3f3d]";

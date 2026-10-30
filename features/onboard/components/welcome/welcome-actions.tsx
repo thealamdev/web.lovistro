@@ -1,12 +1,11 @@
-import Link from "next/link";
-import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 import { useAppDispatch } from "@/redux/hooks";
-import { setStep } from "../../slices/step.slice";
-import { STEPS } from "../../constants/onboard.constants";
+import { Button } from "@/components/ui/button";
 import { Steps } from "../../types/onboard.types";
-import { SIGN_IN_HREF } from "../../constants/welcome.constants";
+import { setStep } from "../../slices/step.slice";
+import AppleIcon from "@/components/icons/AppleIcon";
+import GoogleIcon from "@/components/icons/GoogleIcon";
+import { STEPS } from "../../constants/onboard.constants";
+import SignInRedirectButton from "../common/SignInRedirectButton";
 
 type PageProps = {
     onGoogleClick?: () => void;
@@ -22,7 +21,7 @@ export function WelcomeActions({ onGoogleClick, onAppleClick }: PageProps) {
     }
 
     return (
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center">
             <div className="flex w-full items-center gap-2 rounded-full bg-accent/10 border border-border p-2">
                 <Button
                     type="button"
@@ -31,7 +30,7 @@ export function WelcomeActions({ onGoogleClick, onAppleClick }: PageProps) {
                     onClick={onGoogleClick}
                     className="cursor-pointer size-11 shrink-0 rounded-full bg-white hover:bg-white/90"
                 >
-                    <FcGoogle className="size-5" />
+                    <GoogleIcon className="size-5" />
                 </Button>
                 <Button
                     type="button"
@@ -40,7 +39,7 @@ export function WelcomeActions({ onGoogleClick, onAppleClick }: PageProps) {
                     onClick={onAppleClick}
                     className="cursor-pointer size-11 shrink-0 rounded-full bg-white text-black hover:bg-white/90"
                 >
-                    <FaApple className="size-5" />
+                    <AppleIcon className="size-5" />
                 </Button>
                 <Button
                     onClick={() => nextStep(STEPS.REGISTER)}
@@ -50,12 +49,7 @@ export function WelcomeActions({ onGoogleClick, onAppleClick }: PageProps) {
                 </Button>
             </div>
 
-            <p className="text-sm text-foreground">
-                Already have an account?{" "}
-                <Link href={SIGN_IN_HREF} className="font-medium text-primary">
-                    Sign in
-                </Link>
-            </p>
+            <SignInRedirectButton />
         </div>
     );
 }
