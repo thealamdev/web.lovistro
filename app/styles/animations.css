@@ -1,0 +1,102 @@
+@theme {
+    --animate-shimmer: shimmer 2s infinite;
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+    --animate-shake: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    --animate-fade-up: fade-up 0.6s ease-out both;
+    --animate-splash-spin: splash-spin 6s linear infinite;
+    --animate-splash-heartbeat: splash-heartbeat 1.4s ease-in-out infinite;
+
+    @keyframes shimmer {
+        0% {
+            background-position: 200% 0;
+        }
+
+        100% {
+            background-position: -200% 0;
+        }
+    }
+
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+
+        to {
+            height: 0;
+        }
+    }
+
+    @keyframes shake {
+
+        10%,
+        90% {
+            transform: translateX(-1px);
+        }
+
+        20%,
+        80% {
+            transform: translateX(2px);
+        }
+
+        30%,
+        50%,
+        70% {
+            transform: translateX(-4px);
+        }
+
+        40%,
+        60% {
+            transform: translateX(4px);
+        }
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes splash-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes splash-heartbeat {
+
+        0%,
+        70%,
+        100% {
+            transform: scale(1);
+        }
+
+        14% {
+            transform: scale(1.12);
+        }
+
+        28% {
+            transform: scale(1);
+        }
+
+        42% {
+            transform: scale(1.08);
+        }
+    }
+}

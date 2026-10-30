@@ -3,17 +3,23 @@
 import LoginForm from "./login-form";
 import { type FormEvent } from "react";
 import Navigate from "../common/Navigate";
+import { useRouter } from "next/navigation";
 import OrDevider from "../common/OrDevider";
 import PageHeader from "../common/PageHeader";
+import { ROUTES } from "@/src/generated/routes";
 import OauthButtons from "../common/OauthButtons";
 import { STEPS } from "../../constants/landing.constants";
 import SignUpRedirectButton from "../common/SignUpRedirectButton";
 
 export default function RootLoginComponent() {
 
+    const router = useRouter();
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // TODO: submit email + password
+        // after success redirect to onboard screen
+        router.push(ROUTES.ONBOARD);
     };
 
     return (
