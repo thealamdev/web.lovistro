@@ -1,5 +1,6 @@
 import storage from 'redux-persist/lib/storage'
 import stepReducer from '@/features/onboard/slices/step.slice'
+import otpReducer from '@/features/onboard/slices/otp.slice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import {
     persistStore,
@@ -14,12 +15,13 @@ import {
 
 const rootReducer = combineReducers({
     step: stepReducer,
+    otp: otpReducer,
 })
 
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['step'],
+    whitelist: ['step', 'otp'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

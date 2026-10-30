@@ -3,4 +3,6 @@ export const STEPS = {
     REGISTER: 'register',
     WELCOME: 'welcome',
     FORGOT_PASSWORD: 'forgot-password',
+    OTP_VERIFY: 'otp-verify',
+    RESET_PASSWORD: 'reset-password'
 } as const

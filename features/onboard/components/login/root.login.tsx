@@ -1,13 +1,13 @@
 "use client";
 
+import LoginForm from "./login-form";
 import { type FormEvent } from "react";
+import Navigate from "../common/Navigate";
+import OrDevider from "../common/OrDevider";
+import PageHeader from "../common/PageHeader";
+import OauthButtons from "../common/OauthButtons";
 import { STEPS } from "../../constants/onboard.constants";
 import SignUpRedirectButton from "../common/SignUpRedirectButton";
-import OrDevider from "../common/OrDevider";
-import OauthButtons from "../common/OauthButtons";
-import PageHeader from "../common/PageHeader";
-import Navigate from "../common/Navigate";
-import LoginForm from "./login-form";
 
 export default function RootLoginComponent() {
 
