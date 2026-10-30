@@ -3,7 +3,7 @@ type PageProps = {
     description: string;
 }
 
-export default function AuthPageHeader({
+export default function PageHeader({
     title,
     description
 }: PageProps) {

@@ -1,5 +1,6 @@
 export const STEPS = {
-    WELCOME: 'welcome',
+    LOGIN: 'login',
     REGISTER: 'register',
-    LOGIN: 'login'
+    WELCOME: 'welcome',
+    FORGOT_PASSWORD: 'forgot-password',
 } as const

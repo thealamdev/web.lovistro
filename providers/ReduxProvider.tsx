@@ -1,8 +1,9 @@
 "use client";
 
-import { store } from '@/redux/store'
 import { ReactNode } from 'react'
 import { Provider } from 'react-redux'
+import { persistor, store } from '@/redux/store'
+import { PersistGate } from 'redux-persist/integration/react';
 
 type PageProps = {
     children: Readonly<ReactNode>
@@ -13,7 +14,9 @@ export default function ReduxProvider({
 }: PageProps) {
     return (
         <Provider store={store}>
-            {children}
+            <PersistGate persistor={persistor}>
+                {children}
+            </PersistGate>
         </Provider>
     )
 }

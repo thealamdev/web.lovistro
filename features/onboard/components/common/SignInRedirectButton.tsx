@@ -9,6 +9,7 @@ export default function SignInRedirectButton() {
     const nextStep = (step: Steps) => {
         dispatch(setStep(step));
     }
+    
     return (
         <p className="mt-6 text-center text-sm text-foreground">
             Already have an account?{" "}
