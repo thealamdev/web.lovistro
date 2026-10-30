@@ -1,6 +1,6 @@
 import storage from 'redux-persist/lib/storage'
-import stepReducer from '@/features/onboard/slices/step.slice'
-import otpReducer from '@/features/onboard/slices/otp.slice'
+import stepReducer from '@/features/landing/slices/step.slice'
+import otpReducer from '@/features/landing/slices/otp.slice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import {
     persistStore,

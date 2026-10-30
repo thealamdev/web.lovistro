@@ -2,7 +2,7 @@ import { type FormEvent } from "react";
 import Navigate from '../common/Navigate'
 import PageHeader from '../common/PageHeader'
 import ResetPasswordForm from './reset-password-form'
-import { STEPS } from '../../constants/onboard.constants'
+import { STEPS } from '../../constants/landing.constants'
 
 export default function RootResetPasswordComponent() {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {

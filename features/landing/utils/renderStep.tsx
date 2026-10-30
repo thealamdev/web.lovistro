@@ -1,5 +1,5 @@
-import { Steps } from "../types/onboard.types";
-import { STEPS } from "../constants/onboard.constants";
+import { Steps } from "../types/landing.types";
+import { STEPS } from "../constants/landing.constants";
 import RootLoginComponent from "../components/login/root.login";
 import RootWelcomeComponent from "../components/welcome/root.welcome";
 import RootRegisterComponent from "../components/register/root.register";

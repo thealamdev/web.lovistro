@@ -1,7 +1,7 @@
-import MasterOnboard from "@/features/onboard/master.onboard";
+import MasterLandingComponent from "@/features/landing/master.landing";
 
 export default function Home() {
     return (
-        <MasterOnboard />
+        <MasterLandingComponent />
     );
 }

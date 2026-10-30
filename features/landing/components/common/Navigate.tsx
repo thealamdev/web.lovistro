@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { useAppDispatch } from "@/redux/hooks"
 import { setStep } from "../../slices/step.slice";
-import { Steps } from "../../types/onboard.types";
+import { Steps } from "../../types/landing.types";
 
 type PageProps = {
     to: Steps;

@@ -1,15 +1,15 @@
 "use client";
 
-import LoginForm from "./login-form";
 import { type FormEvent } from "react";
-import Navigate from "../common/Navigate";
+import { STEPS } from "../../constants/landing.constants";
+import SignInRedirectButton from "../common/SignInRedirectButton";
 import OrDevider from "../common/OrDevider";
-import PageHeader from "../common/PageHeader";
 import OauthButtons from "../common/OauthButtons";
-import { STEPS } from "../../constants/onboard.constants";
-import SignUpRedirectButton from "../common/SignUpRedirectButton";
+import PageHeader from "../common/PageHeader";
+import Navigate from "../common/Navigate";
+import RegisterForm from "./register-form";
 
-export default function RootLoginComponent() {
+export default function RootRegisterComponent() {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -22,11 +22,11 @@ export default function RootLoginComponent() {
             <Navigate to={STEPS.WELCOME} />
 
             <PageHeader
-                title="Sign in Using lovistro"
+                title="Sign up Using lovistro"
                 description="Unlock a world of connections with Lovistro"
             />
 
-            <LoginForm
+            <RegisterForm
                 handleSubmit={handleSubmit}
             />
 
@@ -34,7 +34,7 @@ export default function RootLoginComponent() {
 
             <OauthButtons />
 
-            <SignUpRedirectButton />
+            <SignInRedirectButton />
         </div>
     );
 }

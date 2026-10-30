@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { Steps } from '../types/onboard.types';
-import { STEPS } from '../constants/onboard.constants';
+import { Steps } from '../types/landing.types';
+import { STEPS } from '../constants/landing.constants';
 import { RootState } from '@/redux/store';
 
 type StepState = {

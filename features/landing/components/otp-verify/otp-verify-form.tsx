@@ -2,9 +2,9 @@
 
 import { cn } from '@/lib/utils'
 import { type FormEvent } from 'react'
-import { useOtpInput } from '../../hooks/use-otp-input'
 import { OtpStatus } from '../../types/otp.types'
-import { useOtpTimer } from '@/features/onboard/hooks/use-otp-timer'
+import { useOtpInput } from '../../hooks/use-otp-input'
+import { useOtpTimer } from '../../hooks/use-otp-timer'
 
 type PageProps = {
     handleSubmit: (e: FormEvent<HTMLFormElement>) => void

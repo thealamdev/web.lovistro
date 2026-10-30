@@ -1,10 +1,10 @@
 import { useAppDispatch } from "@/redux/hooks";
 import { Button } from "@/components/ui/button";
-import { Steps } from "../../types/onboard.types";
+import { Steps } from "../../types/landing.types";
 import { setStep } from "../../slices/step.slice";
 import AppleIcon from "@/components/icons/AppleIcon";
 import GoogleIcon from "@/components/icons/GoogleIcon";
-import { STEPS } from "../../constants/onboard.constants";
+import { STEPS } from "../../constants/landing.constants";
 import SignInRedirectButton from "../common/SignInRedirectButton";
 
 type PageProps = {

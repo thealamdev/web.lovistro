@@ -1,10 +1,10 @@
 "use client";
 
-import SplashIcon from "@/components/icons/SplashIcon";
-import { WELCOME_SLIDES } from "../../constants/welcome.constants";
 import { StepProgress } from "./step-progress";
 import { WelcomeSlide } from "./welcome-slide";
 import { WelcomeActions } from "./welcome-actions";
+import SplashIcon from "@/components/icons/SplashIcon";
+import { WELCOME_SLIDES } from "../../constants/welcome.constants";
 import { useWelcomeCarousel } from "../../hooks/use-welcome-carousel";
 
 export default function RootWelcomeComponent() {

@@ -1,10 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
-import {
-    OTP_DURATION_MS,
-    clearOtpTimer,
-    startOtpTimer,
-} from '@/features/onboard/slices/otp.slice'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks'
+import { clearOtpTimer, OTP_DURATION_MS, startOtpTimer } from '../slices/otp.slice'
 
 const pad = (n: number) => String(n).padStart(2, '0')
 

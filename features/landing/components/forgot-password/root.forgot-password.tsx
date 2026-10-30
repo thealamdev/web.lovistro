@@ -4,7 +4,7 @@ import PageHeader from "../common/PageHeader";
 import { useAppDispatch } from "@/redux/hooks";
 import { setStep } from "../../slices/step.slice";
 import ForgotPasswordForm from "./forgot-password-form";
-import { STEPS } from "../../constants/onboard.constants";
+import { STEPS } from "../../constants/landing.constants";
 
 export default function RootForgotPasswordComponent() {
 

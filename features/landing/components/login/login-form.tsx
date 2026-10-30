@@ -5,8 +5,8 @@ import { Eye, EyeOff, Lock, Mail } from "lucide-react";
 import { FieldInput } from "@/components/ui/field-input";
 import { useAppDispatch } from "@/redux/hooks";
 import { setStep } from "../../slices/step.slice";
-import { Steps } from "../../types/onboard.types";
-import { STEPS } from "../../constants/onboard.constants";
+import { Steps } from "../../types/landing.types";
+import { STEPS } from "../../constants/landing.constants";
 
 type PageProps = {
     handleSubmit: (e: FormEvent<HTMLFormElement>) => void;

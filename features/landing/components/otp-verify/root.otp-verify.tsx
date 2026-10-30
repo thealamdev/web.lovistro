@@ -5,7 +5,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import { useState, type FormEvent } from "react";
 import { OtpStatus } from "../../types/otp.types";
 import { setStep } from "../../slices/step.slice";
-import { STEPS } from "../../constants/onboard.constants";
+import { STEPS } from "../../constants/landing.constants";
 
 export default function RootOtpVerifyComponent() {
     const demoOtp = "123456";
