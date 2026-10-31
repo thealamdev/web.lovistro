@@ -1,13 +1,18 @@
 'use client'
 
+import { useAppDispatch } from '@/redux/hooks'
 import SplashIcon from '@/components/icons/SplashIcon'
 import ConfettiCanvas from '@/components/ui/confetti-canvas'
+import { ONBOARD_STEPS } from '../../constants/onboard.constants';
+import { setOnboardStep } from '../../slices/onboard-form-step.slice';
 
-type PageProps = {
-    onGetStarted: () => void
-}
+export default function RootGreetingComponent() {
+    const dispatch = useAppDispatch();
 
-export default function RootGreetingComponent({ onGetStarted }: PageProps) {
+    const onGetStarted = () => {
+        dispatch(setOnboardStep(ONBOARD_STEPS.NAME));
+    }
+
     return (
         <main className="relative flex min-h-dvh flex-col overflow-hidden bg-background px-5 pb-8 text-foreground">
             <ConfettiCanvas className="absolute inset-0" />

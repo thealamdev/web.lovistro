@@ -10,15 +10,18 @@ import { ROUTES } from "@/src/generated/routes";
 import OauthButtons from "../common/OauthButtons";
 import { STEPS } from "../../constants/landing.constants";
 import SignUpRedirectButton from "../common/SignUpRedirectButton";
+import { useAppDispatch } from "@/redux/hooks";
+import { setStep } from "../../slices/step.slice";
 
 export default function RootLoginComponent() {
-
+    const dispatch = useAppDispatch();
     const router = useRouter();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // TODO: submit email + password
         // after success redirect to onboard screen
+        dispatch(setStep(STEPS.WELCOME))
         router.push(ROUTES.ONBOARD);
     };
 
